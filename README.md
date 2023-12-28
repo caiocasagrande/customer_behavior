@@ -37,16 +37,16 @@ This Data Science project presents a data-driven approach to understand consumer
   
 | antecedents                                            | consequents                    | support | confidence | lift   |
 |--------------------------------------------------------|--------------------------------|---------|------------|--------|
-| (GREEN REGENCY TEACUP AND...) | (ROSES REGENCY TEACUP AND SAUCER) | 0.019   | 0.828      | 16.296 |
-| (LUNCH BAG WOODLAND, LUNCH...) | (LUNCH BAG RED RETROSPOT)       | 0.011   | 0.826      | 9.641  |
-| (STRAWBERRY CHARLOTTE BAG...) | (RED RETROSPOT CHARLOTTE BAG)    | 0.012   | 0.821      | 17.765 |
-| (LUNCH BAG PINK POLKADOT...) | (LUNCH BAG BLACK SKULL.)         | 0.010   | 0.798      | 10.523 |
-| (LUNCH BAG WOODLAND, LUNCH...) | (LUNCH BAG RED RETROSPOT)       | 0.011   | 0.797      | 9.296  |
-| (JUMBO BAG VINTAGE LEAF...)| (JUMBO BAG RED RETROSPOT)       | 0.012   | 0.796      | 7.551  |
-| (LUNCH BAG WOODLAND, BAG...) | (LUNCH BAG RED RETROSPOT)       | 0.011   | 0.789      | 9.203  |
-| (JUMBO BAG PEARS, JUMBO...)   | (JUMBO BAG APPLES)              | 0.011   | 0.788      | 16.106 |
-| (JUMBO BAG SCANDINAVIAN...) | (JUMBO BAG RED RETROSPOT)       | 0.011   | 0.785      | 7.447  |
-| (GREEN REGENCY TEACUP...)            | (ROSES REGENCY TEACUP AND SAUCER) | 0.036   | 0.779      | 15.334 |
+| GREEN REGENCY TEACUP AND... | ROSES REGENCY TEACUP AND SAUCER | 0.019   | 0.828      | 16.296 |
+| LUNCH BAG WOODLAND, LUNCH... | LUNCH BAG RED RETROSPOT       | 0.011   | 0.826      | 9.641  |
+| STRAWBERRY CHARLOTTE BAG... | RED RETROSPOT CHARLOTTE BAG    | 0.012   | 0.821      | 17.765 |
+| LUNCH BAG PINK POLKADOT... | LUNCH BAG BLACK SKULL         | 0.010   | 0.798      | 10.523 |
+| LUNCH BAG WOODLAND, LUNCH... | LUNCH BAG RED RETROSPOT       | 0.011   | 0.797      | 9.296  |
+| JUMBO BAG VINTAGE LEAF...| JUMBO BAG RED RETROSPOT       | 0.012   | 0.796      | 7.551  |
+| LUNCH BAG WOODLAND, BAG... | LUNCH BAG RED RETROSPOT       | 0.011   | 0.789      | 9.203  |
+| JUMBO BAG PEARS, JUMBO...   | JUMBO BAG APPLES              | 0.011   | 0.788      | 16.106 |
+| JUMBO BAG SCANDINAVIAN... | JUMBO BAG RED RETROSPOT       | 0.011   | 0.785      | 7.447  |
+| GREEN REGENCY TEACUP...            | ROSES REGENCY TEACUP AND S... | 0.036   | 0.779      | 15.334 |
 
 </div>
 
