@@ -1,33 +1,40 @@
-# Beyond "You May Also Like": Deconstructing Consumer Choices with Data Science
+# Além de "Você Também Pode Gostar": Desconstruindo Escolhas do Consumidor com Ciência de Dados
 
-This Data Science project presents a data-driven approach to understand consumer behavior and personalize product recommendations using an e-commerce dataset. It holds the potential to boost sales significantly and enhance customer experience. The project is structured around three key chapters: **Exploratory Data Analysis**, **Market Basket Analysis**, and **Recommendation System**.
+Este projeto de Ciência de Dados apresenta uma abordagem baseada em dados para entender o comportamento do consumidor e personalizar recomendações de produtos usando um conjunto de dados da e-commerce britânica **Rex London**. A fim de impulsionar significativamente as vendas e aprimorar a experiência do cliente, projeto está estruturado em torno de três capítulos principais: **Análise Exploratória de Dados**, **Análise de Cesta de Mercado** e **Sistema de Recomendação**.
 
-- The first one, the EDA, is a crucial step for uncovering hidden patterns on purchases like consumer behavior, product preferences, basket size and average prices over time.
+# Sobre a Rex London
+Rex London é um varejista de comércio eletrônico com sede no Reino Unido que oferece uma gama diversificada de produtos, como presentes e acessórios para casa. A empresa quer aumentar o engajamento com os visitantes da página e melhorar a experiência de compra dos clientes.
 
-- The EDA paves the way for the *association rule mining approach* that is used in a **Market Basket Analysis** with the `apriori` library in Python. More than only using the library, key terms like **antecedents**, **consequents**, **support**, **confidence**, and **lift** are also explained.
+# O problema de negócio
+Para alcançar os objetivos acima, a empresa precisa entender quais são os produtos que normalmente são comprados juntos e construir um sistema de recomendação de produtos com base no perfil dos seus clientes.
 
-- Further, a **recommendation system** based on customer similarity is developed to generate recommendations of products. Thus, as the customers browses through the site, their experience is personalized in order to predict what *"they might also like"* and to maximize the sales for the company as well.
+# Solução do problema
+- O projeto começa a partir da Análise Exploratória de Dados (EDA), etapa crucial para descobrir padrões ocultos em compras, como comportamento do consumidor, preferências de produtos, tamanho da cesta e preços médios ao longo do tempo.
 
-# Exploratory Data Analysis
+- A EDA abre caminho para as *regras de associação* usadas em uma **Análise de Cesta de Mercado** com a biblioteca `apriori` em Python. Mais do que apenas usar a biblioteca, termos-chave como **antecedentes**, **consequentes**, **suporte**, **confiança** e **lift** também são explicados.
 
-### How is the distribution of purchases in 2011?
+- Além disso, é desenvolvido um **sistema de recomendação** baseado na semelhança entre clientes para gerar recomendações de produtos. Assim, à medida que os clientes navegam pelo site, sua experiência é personalizada para prever o que *"eles também podem gostar"* e maximizar as vendas para a empresa.
+
+# Análise Exploratória de Dados
+
+### Como é a distribuição de compras em 2011?
 ![image](https://github.com/caiocasagrande/customer_behavior/blob/main/images/3_2_purchases_per_day_2011.png)
-- The data is more well behaved in 2011 than in 2010, but the variations are very strong 
-- There are a little bit more than 10 spikes in the purchases of 2011
+- Os dados estão mais comportados em 2011 do que em 2010, mas as variações são muito expressivas
+- Existem um pouco mais de 10 picos nas compras de 2011
 
-### How is the relation between price and quantity? The higher the price, the lower the quantity?
+### Qual é a relação entre preço e quantidade? Quanto maior o preço, menor a quantidade?
 ![image](https://github.com/caiocasagrande/customer_behavior/blob/main/images/3_8_avg_price_vs_avg_qnt.png)
-- The relation between price and quantity is inversely proportional
-- The average price is higher for items with a lower quantity
-- The average price is lower for items with a higher quantity
-- So the higher the price, the lower the quantity
+- A relação entre preço e quantidade é inversamente proporcional
+- O preço médio é maior para itens com uma quantidade menor
+- O preço médio é menor para itens com uma quantidade maior
+- Portanto, quanto maior o preço, menor a quantidade
 
-### What is the behavior of *price* and *size* of baskets per month in 2011?
+### Qual é o comportamento do *preço* e *tamanho* das cestas por mês em 2011?
 ![image](https://github.com/caiocasagrande/customer_behavior/blob/main/images/3_10_avg_price_avg_size_basket_per_month.png)
-- The average price of baskets hits the lowest point in June, followed by July
-- The highest average price of baskest are seen from September to November
-- September and October are also the months with the highest average size os baskets
-- **Taking also into account the number of purchases per month seen earlier, we can tell that the end of the year is the best time for the company to sell its products**
+- O preço médio das cestas atinge o ponto mais baixo em junho, seguido por julho
+- Os preços médios mais altos das cestas são observados de setembro a novembro
+- Setembro e outubro também são os meses com o maior tamanho médio de cestas
+- **Levando também em consideração o número de compras por mês visto anteriormente, podemos afirmar que o final do ano é o melhor momento para a empresa vender seus produtos**
 
 # Market Basket Analysis 
 
