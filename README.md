@@ -2,20 +2,22 @@
 
 Este projeto de Ciência de Dados apresenta uma abordagem baseada em dados para entender o comportamento do consumidor e personalizar recomendações de produtos usando um conjunto de dados da e-commerce britânica **Rex London**. A fim de impulsionar significativamente as vendas e aprimorar a experiência do cliente, projeto está estruturado em torno de três capítulos principais: **Análise Exploratória de Dados**, **Análise de Cesta de Mercado** e **Sistema de Recomendação**.
 
-# Sobre a Rex London
+## 1. Sobre a Rex London
 Rex London é um varejista de comércio eletrônico com sede no Reino Unido que oferece uma gama diversificada de produtos, como presentes e acessórios para casa. A empresa quer aumentar o engajamento com os visitantes da página e melhorar a experiência de compra dos clientes.
 
-# O problema de negócio
+Os dados foram obtidos através da plataforma [Kaggle](https://www.kaggle.com/datasets/aslanahmedov/market-basket-analysis).
+
+## 2. O problema de negócio
 Para alcançar os objetivos acima, a empresa precisa entender quais são os produtos que normalmente são comprados juntos e construir um sistema de recomendação de produtos com base no perfil dos seus clientes.
 
-# Solução do problema
+## 3. Solução do problema
 - O projeto começa a partir da Análise Exploratória de Dados (EDA), etapa crucial para descobrir padrões ocultos em compras, como comportamento do consumidor, preferências de produtos, tamanho da cesta e preços médios ao longo do tempo.
 
 - A EDA abre caminho para as *regras de associação* usadas em uma **Análise de Cesta de Mercado** com a biblioteca `apriori` em Python. Mais do que apenas usar a biblioteca, termos-chave como **antecedentes**, **consequentes**, **suporte**, **confiança** e **lift** também são explicados.
 
 - Além disso, é desenvolvido um **sistema de recomendação** baseado na semelhança entre clientes para gerar recomendações de produtos. Assim, à medida que os clientes navegam pelo site, sua experiência é personalizada para prever o que *"eles também podem gostar"* e maximizar as vendas para a empresa.
 
-# Análise Exploratória de Dados
+## 4. Principais insights
 
 ### Como é a distribuição de compras em 2011?
 ![image](https://github.com/caiocasagrande/customer_behavior/blob/main/images/3_2_purchases_per_day_2011.png)
@@ -36,9 +38,9 @@ Para alcançar os objetivos acima, a empresa precisa entender quais são os prod
 - Setembro e outubro também são os meses com o maior tamanho médio de cestas
 - **Levando também em consideração o número de compras por mês visto anteriormente, podemos afirmar que o final do ano é o melhor momento para a empresa vender seus produtos**
 
-# Market Basket Analysis 
+# 5. Resultados
 
-## Market Basket Analysis Results
+## Market Basket Analysis 
 
 <div align="center">
   
@@ -57,36 +59,36 @@ Para alcançar os objetivos acima, a empresa precisa entender quais são os prod
 
 </div>
 
-### Explaining the terms
+### Lendo os Resultados
 
-- **Antecedents:** These are the items that are the starting point for the analysis. In other words, they are present in the basket before the consequent item is purchased.
-- **Consequents:** These are the items that are likely to be purchased after the antecedents.
-    - Associaton rule: If the *antecedents* are present in the basket, the *consequent* is likely to be purchased.
-- **Support:** Support measures how frequently the items of a rule (both antecedents and consequents) appear together in the dataset. It is the proportion of transactions in which the items are bought together. 
-- **Confidence:** This is a measure of the likelihood of the consequent item being purchased when the antecedent item is already in the basket. 
-- **Lift:** Lift measures the degree of association between the antecedent and consequent items, while considering the baseline purchase probability of the consequent item. A lift value greater than 1 indicates a positive association, meaning that the items are more likely to be bought together than independently.
+- ***Antecedents:*** Estes são os itens que constituem o ponto de partida para a análise. Em outras palavras, eles estão presentes na cesta antes que o item consequente seja comprado.
+- ***Consequents:*** Esses são os itens que são prováveis de serem comprados após os antecedentes.
+    - Regra de associação: Se os *antecedentes* estiverem presentes na cesta, é provável que o *consequente* seja comprado.
+- ***Support:*** O suporte mede com que frequência os itens de uma regra (tanto antecedentes quanto consequentes) aparecem juntos no conjunto de dados. É a proporção de transações em que os itens são comprados juntos.
+- ***Confidence:*** Esta é uma medida da probabilidade de o item consequente ser comprado quando o item antecedente já está na cesta.
+- ***Lift:*** O lift mede o grau de associação entre os itens antecedentes e consequentes, levando em consideração a probabilidade de compra padrão do item consequente. Um valor de lift maior que 1 indica uma associação positiva, o que significa que os itens têm mais probabilidade de serem comprados juntos do que independentemente.
 
-# Recommendation System 
-## Recommendation System Steps
-1. Construct an utility matrix
-- Utility matrix is a matrix that contains the number of times an item was purchased (`quantity`) by each client
-2. Calculate the similarity between clients using *cosine similarity*
-- Cosine similarity is a metric that measures the similarity between two vectors
-3. Create a dataframe that contains the similarity matrix
-- Clients as rows and columns with their similarity values in the matrix
-4. Generate recommendations looping through each client 
-- The goal is to recommend two products based on the three most similar clients
-- Get the k most similar clients
-- Get the products purchased by the similar clients
-- We want only the products that have not been purchased
-- Recommend the top n products that have not been purchased
-5. Create a dataframe with the recommendations for each client
 
-## Recommendation System Results
+## Recommendation System 
+**1.** Construir uma matriz de utilidade
+- A matriz de utilidade é uma matriz que contém o número de vezes que um item foi comprado (`quantity`) por cada cliente
+**2.** Calcular a similaridade entre os clientes usando *cosine similarity*
+- A similaridade de cosseno é uma métrica que mede a similaridade entre dois vetores
+**3.** Criar um dataframe que contenha a matriz de similaridade
+- Clientes como linhas e colunas com seus valores de similaridade na matriz
+**4.** Gerar recomendações para cada cliente
+- O objetivo é recomendar dois produtos com base nos seus três clientes mais similares
+- Obter os *k* clientes mais similares
+- Obter os produtos comprados pelos clientes semelhantes
+- Queremos apenas os produtos que não foram comprados
+- Recomendar os principais *n* produtos que não foram comprados
+**5.** Criar um dataframe com as recomendações para cada cliente
+
+## Resultados do Recommendation System 
 
 <div align="center">
 
-| customer_id | product_1                          | product_2                                    |
+| Cliente | Produto 1                          | Produto 2                                    |
 |-------------|-----------------------------------|----------------------------------------------|
 | 12347       | WRAP 50'S CHRISTMAS               | 10 COLOUR SPACEBOY PEN                       |
 | 12349       | GIRLS VINTAGE TIN SEASIDE BUCKET  | RED RETROSPOT WRAP                            |
@@ -105,3 +107,15 @@ Para alcançar os objetivos acima, a empresa precisa entender quais são os prod
 | 12364       | MAGIC DRAWING SLATE SPACEBOY       | BIRTHDAY BANQUET GIFT WRAP                   |
 
 </div>
+
+## 6. Conclusões
+- Com os resultados gerados pela **Análise de Cesta de Mercado** e pelo **Sistema de Recomendação**, a empresa Rex London está munida com as informações necessárias para aprimorar a experiência de seus clientes e impulsionar as vendas de seus produtos.
+
+## 7. Próximos passos
+- Construção de um Dashboard interativo
+  - **Análise de Cesta de Mercado:**
+    - *input:* produto antecedente
+    - *output:* produto consequente
+  - **Sistema de Recomendação:**
+    - *input:* cliente
+    - *output:* dois produtos que o cliente ainda não comprou e pode comprar
