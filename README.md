@@ -72,10 +72,13 @@ Para alcançar os objetivos acima, a empresa precisa entender quais são os prod
 ## Recommendation System 
 **1.** Construir uma matriz de utilidade
 - A matriz de utilidade é uma matriz que contém o número de vezes que um item foi comprado (`quantity`) por cada cliente
+
 **2.** Calcular a similaridade entre os clientes usando *cosine similarity*
 - A similaridade de cosseno é uma métrica que mede a similaridade entre dois vetores
+
 **3.** Criar um dataframe que contenha a matriz de similaridade
 - Clientes como linhas e colunas com seus valores de similaridade na matriz
+
 **4.** Gerar recomendações para cada cliente
 - O objetivo é recomendar dois produtos com base nos seus três clientes mais similares
 - Obter os *k* clientes mais similares
