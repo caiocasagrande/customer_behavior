@@ -85,7 +85,8 @@ Para alcançar os objetivos acima, a empresa precisa entender quais são os prod
 - Obter os produtos comprados pelos clientes semelhantes
 - Queremos apenas os produtos que não foram comprados
 - Recomendar os principais *n* produtos que não foram comprados
-**5.** Criar um dataframe com as recomendações para cada cliente
+
+**5.** Criar um dataframe preliminar com as recomendações para cada cliente
 
 ## Resultados do Recommendation System 
 
